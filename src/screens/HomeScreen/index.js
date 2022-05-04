@@ -1,10 +1,11 @@
-import Footer from "../../components/Footer";
-import Link from "../../components/Link";
-import { theme } from "../../theme/theme";
-import { Image, Box, Text, Icon, Input, Button } from "../../theme/components";
+import Head from 'next/head'
+import Footer from '../../components/patterns/Footer'
+import Link from '../../components/Link'
+import { theme } from '../../theme/theme';
+import { Image, Box, Text, Icon, Input, Button } from '../../theme/components';
 
-const LOGO_ALURA_URL = "/images/alura-logo.svg";
-const SIDE_IMAGE_URL = "/images/alura-cases.png";
+const LOGO_ALURA_URL = '/images/alura-logo.svg';
+const SIDE_IMAGE_URL = '/images/alura-cases.png'
 
 function SideImage() {
   return (
@@ -14,11 +15,11 @@ function SideImage() {
           md: theme.space.x8,
         },
         marginHorizontal: {
-          sm: "auto",
+          sm: 'auto'
         },
         maxWidth: {
           sm: theme.space.xcontainer_md,
-        },
+        }
       }}
     >
       <Box
@@ -26,7 +27,7 @@ function SideImage() {
           top: 0,
           bottom: 0,
           right: {
-            lg: theme.space.x0,
+            lg: theme.space.x0
           },
           width: {
             lg: theme.space["x1/2"],
@@ -39,21 +40,21 @@ function SideImage() {
             lg: theme.space.x16,
           },
           position: {
-            sm: "relative",
-            lg: "absolute",
-          },
+            sm: 'relative',
+            lg: 'absolute',
+          }
         }}
       >
-        <Box
+        <Box 
           styleSheet={{
             height: {
               lg: theme.space["x1/1"],
             },
             maxWidth: {
               sm: theme.space.xcontainer_md,
-              lg: "none",
+              lg: 'none'
             },
-            position: "relative",
+            position: 'relative',
             paddingHorizontal: {
               sm: theme.space.x0,
             },
@@ -64,7 +65,7 @@ function SideImage() {
               lg: `-${theme.space.x40}`,
             },
             marginHorizontal: {
-              sm: "auto",
+              sm: 'auto',
             },
           }}
         >
@@ -90,12 +91,15 @@ function SideImage() {
         </Box>
       </Box>
     </Box>
-  );
+  )
 }
 
 export default function HomeScreen() {
   return (
     <Box>
+      <Head>
+        <title>Home - Alura Cases Campanha</title>
+      </Head>
       <Box
         as="main"
         styleSheet={{
@@ -105,9 +109,9 @@ export default function HomeScreen() {
       >
         <Box
           styleSheet={{
-            overflow: "hidden",
+            overflow: 'hidden',
             position: {
-              lg: "relative",
+              lg: 'relative',
             },
             paddingTop: {
               xs: theme.space.x6,
@@ -121,7 +125,7 @@ export default function HomeScreen() {
         >
           <Box
             styleSheet={{
-              marginHorizontal: "auto",
+              marginHorizontal: 'auto',
               paddingHorizontal: {
                 xs: theme.space.x4,
                 sm: theme.space.x6,
@@ -139,7 +143,7 @@ export default function HomeScreen() {
               },
               gridTemplateColumns: {
                 lg: "repeat(2, minmax(0, 1fr))",
-              },
+              }
             }}
           >
             <Box>
@@ -183,12 +187,12 @@ export default function HomeScreen() {
                         borderRadius: theme.space.x64,
                         color: theme.colors.primary["400"],
                         backgroundColor: theme.colors.primary["100"],
-                        paddingHorizontal: theme.space["x2.5"],
-                        paddingVertical: theme.space["x1"],
+                        paddingHorizontal: theme.space['x2.5'],
+                        paddingVertical: theme.space['x1'],
                         marginRight: theme.space.x2,
                         marginBottom: {
                           xs: theme.space.x2,
-                          sm: theme.space.x0,
+                          sm: theme.space.x0
                         },
                       }}
                     >
@@ -198,16 +202,16 @@ export default function HomeScreen() {
                       styleSheet={{
                         textVariant: theme.typography.variants.body4,
                         fontWeight: "600",
-                        display: "inline-flex",
+                        display: 'inline-flex',
                         borderRadius: theme.space.x64,
                         color: theme.colors.primary["400"],
-                        alignItems: "center",
+                        alignItems: 'center',
                       }}
                     >
                       <Text>Confira as principais dúvidas</Text>
                       <Icon
                         styleSheet={{
-                          iconVariant: "chevronRight",
+                          iconVariant: 'chevronRight',
                           marginLeft: theme.space.xpx,
                         }}
                         aria-hidden="true"
@@ -238,10 +242,7 @@ export default function HomeScreen() {
                       marginTop: theme.space.x6,
                     }}
                   >
-                    Aqui você vai ter acesso a discussões avançadas: as
-                    principais decisões sobre arquitetura e design de sistemas.
-                    Aprenda através das descobertas que as principais empresas
-                    de tecnologia enfrentam!
+                    Aqui você vai ter acesso a discussões avançadas: as principais decisões sobre arquitetura e design de sistemas. Aprenda através das descobertas que as principais empresas de tecnologia enfrentam!
                   </Text>
                   <Text
                     as="p"
@@ -259,15 +260,15 @@ export default function HomeScreen() {
                   action="#"
                   styleSheet={{
                     display: {
-                      sm: "flex",
+                      sm: 'flex',
                     },
                     marginTop: theme.space.x12,
                     width: {
-                      sm: theme.space["x1/1"],
+                      sm: theme.space['x1/1'],
                     },
                     maxWidth: {
                       sm: theme.space.xcontainer_lg,
-                    },
+                    }
                   }}
                 >
                   <Box
@@ -291,7 +292,7 @@ export default function HomeScreen() {
                       placeholder="Coloque seu email aqui"
                     />
                   </Box>
-                  <Box
+                  <Box 
                     styleSheet={{
                       marginTop: {
                         xs: theme.space.x4,
@@ -319,5 +320,5 @@ export default function HomeScreen() {
       </Box>
       <Footer />
     </Box>
-  );
+  )
 }
